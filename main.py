@@ -36,7 +36,7 @@ async def print_enemy(ctx):
     await ctx.respond("Here's the list of enemy factions in a list.", embed=embed)
 
 
-@bot.slash_command(name="add_kos_user", description = "Add a user to the KOS list.", guild_ids = [1342131167175901286])
+@bot.slash_command(name="add_kos_user", description = "Add a user to the KOS list.", guild_ids = [1147726964048805938])
 async def add_kos(ctx):
     await ctx.respond('Enter the ROBLOX username of the user.')
     rblx_id = await bot.wait_for('message', check=lambda message: message.author == ctx.author)
@@ -45,7 +45,7 @@ async def add_kos(ctx):
 
     await ctx.respond(f"✅ {rblx_id.content} has been added to the list.")
 
-@bot.slash_command(name="add_enemy_faction", description ="Adds an enemy faction to the DBMS", guild_ids = [1342131167175901286])
+@bot.slash_command(name="add_enemy_faction", description ="Adds an enemy faction to the DBMS", guild_ids = [1147726964048805938])
 async def add_enemy_faction(ctx):
 
 
@@ -57,7 +57,7 @@ async def add_enemy_faction(ctx):
 
     await ctx.respond(f"✅`{new_fac.content}`has been added to the list.")
 
-@bot.slash_command(name ="print_kos_users", description = "Gives a neatly formatted embed of users to KOS.",guild_ids=[1342131167175901286])   
+@bot.slash_command(name ="print_kos_users", description = "Gives a neatly formatted embed of users to KOS.",guild_ids=[1147726964048805938])   
 async def print_kos_users(ctx):
 
     kos_path = Path("kosusers.txt")
