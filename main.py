@@ -1,4 +1,5 @@
 import discord
+from discord import Option
 import os # default module
 from dotenv import load_dotenv
 from random import randint
@@ -79,7 +80,7 @@ async def ally_factions(ctx:discord.ApplicationContext):
     
     formatted_list = '\n'.join(formatted_lines)
 
-    embed = discord.Embedmbed(title = "Allied factions", description = formatted_list, color = discord.Colour.dark_gold(),)
+    embed = discord.Embed(title = "Allied factions", description = formatted_list, color = discord.Colour.dark_gold(),)
     embed.set_thumbnail(url="https://i.postimg.cc/Jznf7tRw/isignia.webp")
     embed.set_footer(text="Created by SbPat")
     
